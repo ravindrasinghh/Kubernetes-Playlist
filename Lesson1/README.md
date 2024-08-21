@@ -1,5 +1,5 @@
 # Create an EKS Cluster using Terraform
-![EKS](cluster.png)
+![EKS](EKS.png)
 
 This repository contains Terraform scripts to create an Amazon EKS cluster. The setup includes VPC, subnets, security groups, IAM roles, and the EKS cluster itself.
 
