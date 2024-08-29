@@ -82,3 +82,67 @@ controller:
       http: http
       https: http
 ```
+Example ingress.yaml file
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: photoapp
+spec:
+  selector:
+    matchLabels:
+      app: photoapp
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: photoapp
+    spec:
+      containers:
+      - image: ravindrasingh6969/nodeapp:latest
+        name: photoapp
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: photoapp
+spec:
+  ports:
+  - port: 80 #service port  #kubeproxy will open port on worker node to which can route traffic to alb
+    targetPort: 8080 #container port
+    protocol: TCP
+  type: ClusterIP
+  selector:
+    app: photoapp
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: photoapp
+  annotations:
+    # Ingress class to use the NGINX Ingress Controller
+    kubernetes.io/ingress.class: "nginx"
+    # AWS-specific annotations for SSL and the load balancer
+    alb.ingress.kubernetes.io/scheme: "internet-facing"
+    alb.ingress.kubernetes.io/target-type: "ip"
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-south-1:434605749312:certificate/9c87dc98-73ca-40f8-a731-280b943ea7f3"
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: photoapp.codedevops.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: photoapp
+                port:
+                  number: 80
+```
+## Troubleshooting
+If you encounter any issues, refer to the Nginx ingress documentation or raise an issue in this repository.
