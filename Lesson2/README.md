@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed:
 ```
 git clone git@github.com:ravindrasinghh/Kubernetes-Playlist.git
 cd Kubernetes-Playlist/Lesson1/
-<b>Include the above configurations files in your Terraform code to install the nginx ingress controller</b>
+Include the above configurations files in your Terraform code to install the nginx ingress controller
 ```
 
 ### Step 2: Add nginx.tf file 
@@ -37,7 +37,7 @@ resource "helm_release" "ingress-nginx" {
   }
 }
 ```
-### Step 2: Add nginx.yaml file 
+### Step 3: Add nginx.yaml file 
 ```
 controller:
   replicaCount: 2
@@ -75,12 +75,12 @@ controller:
       http: http
       https: http
 ```
-### Step 5: Verifying the Installation
+### Step 4: Verifying the Installation
 ```
 1. kubectl get pods -n ingress-nginx
 2. kubectl get services -n ingress-nginx
 ```
-### Step 4: An example Ingress YAML file to support the demo and assist with the implementation.
+### Step 5: An example Ingress YAML file to support the demo and assist with the implementation.
 ```
 apiVersion: apps/v1
 kind: Deployment
