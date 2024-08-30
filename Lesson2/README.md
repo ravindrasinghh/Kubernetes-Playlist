@@ -4,7 +4,7 @@ This lesson covers the steps to install and configure an NGINX Ingress Controlle
 ![NGINX](NGINX.png)
 
 # Before getting started:
-1. Follow the instructions from the previous video to create a cluster with v1.30.3 
+1. Follow the instructions from the previous video to <b>create a EKS cluster with v1.30</b>
 
 Before you begin, ensure you have the following installed:
 
@@ -12,21 +12,15 @@ Before you begin, ensure you have the following installed:
 - AWS CLI configured with appropriate credentials
 - [kubectl](https://kubernetes.io/docs/tasks/tools/) for interacting with your EKS cluster
 
-## Steps to Deploy
-
 ### Step 1: Clone the Repository
 
 ```
 git clone git@github.com:ravindrasinghh/Kubernetes-Playlist.git
-cd Kubernetes-Playlist/Lesson2/
-Include the newly added files in your Terraform code to install the nginx ingress controller
+cd Kubernetes-Playlist/Lesson1/
+<b>Include the above configurations files in your Terraform code to install the nginx ingress controller</b>
 ```
-### Step 2: Initialize Terraform
-- terraform init
-- terraform plan
-- terraform apply
 
-# please add nginx.tf file 
+### Step 2: Add nginx.tf file 
 nginx.tf
 ```
 resource "helm_release" "ingress-nginx" {
@@ -44,7 +38,7 @@ resource "helm_release" "ingress-nginx" {
   }
 }
 ```
-nginx.yaml
+### Step 2: Add nginx.yaml file 
 ```
 controller:
   replicaCount: 2
@@ -82,7 +76,7 @@ controller:
       http: http
       https: http
 ```
-Example ingress.yaml file
+### Step 4: An example Ingress YAML file to support the demo and assist with the implementation
 ```
 apiVersion: apps/v1
 kind: Deployment
