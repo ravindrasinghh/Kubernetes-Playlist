@@ -21,7 +21,6 @@ cd Kubernetes-Playlist/Lesson1/
 ```
 
 ### Step 2: Add nginx.tf file 
-nginx.tf
 ```
 resource "helm_release" "ingress-nginx" {
   name             = "ingress-nginx"
@@ -76,7 +75,12 @@ controller:
       http: http
       https: http
 ```
-### Step 4: An example Ingress YAML file to support the demo and assist with the implementation
+### Step 5: Verifying the Installation
+```
+1. kubectl get pods -n ingress-nginx
+2. kubectl get services -n ingress-nginx
+```
+### Step 4: An example Ingress YAML file to support the demo and assist with the implementation.
 ```
 apiVersion: apps/v1
 kind: Deployment
