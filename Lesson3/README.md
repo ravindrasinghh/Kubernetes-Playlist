@@ -1,6 +1,6 @@
-### Lesson 2: Install NGINX Ingress Controller in AWS EKS
+### Lesson 2: Integrate API Gateway with AWS EKS NLB
 
-This lesson covers the steps to install and configure an NGINX Ingress Controller in your EKS cluster, enabling you to manage external access to your Kubernetes services.
+This lesson covers the steps to Integrate API Gateway with AWS EKS NLB.
 ![API](API.png)
 
 # Before getting started:
