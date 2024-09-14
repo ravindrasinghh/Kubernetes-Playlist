@@ -136,28 +136,28 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: myapp
+                name: photoapp
                 port:
                   number: 80
           - path: /ping
             pathType: Prefix
             backend:
               service:
-                name: myapp
+                name: photoapp
                 port:
                   number: 80
           - path: /metrics
             pathType: Prefix
             backend:
               service:
-                name: myapp
+                name: photoapp
                 port:
                   number: 80  
           - path: /error
             pathType: Prefix
             backend:
               service:
-                name: myapp
+                name: photoapp
                 port:
                   number: 80 
 ```
