@@ -120,8 +120,6 @@ kind: Ingress
 metadata:
   name: photoapp
   annotations:
-    # Ingress class to use the NGINX Ingress Controller
-    kubernetes.io/ingress.class: "nginx"
     # AWS-specific annotations for SSL and the load balancer
     alb.ingress.kubernetes.io/scheme: "internet-facing"
     alb.ingress.kubernetes.io/target-type: "ip"
@@ -131,16 +129,37 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: photoapp.codedevops.cloud
+    - host: myapp.codedevops.cloud
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: photoapp
+                name: myapp
                 port:
                   number: 80
+          - path: /ping
+            pathType: Prefix
+            backend:
+              service:
+                name: myapp
+                port:
+                  number: 80
+          - path: /metrics
+            pathType: Prefix
+            backend:
+              service:
+                name: myapp
+                port:
+                  number: 80  
+          - path: /error
+            pathType: Prefix
+            backend:
+              service:
+                name: myapp
+                port:
+                  number: 80 
 ```
 ## Troubleshooting
 If you encounter any issues, refer to the Nginx ingress documentation or raise an issue in this repository.
