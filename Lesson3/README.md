@@ -1,4 +1,4 @@
-### Lesson 2: Integrate API Gateway with AWS EKS NLB
+### Lesson 3: Integrate API Gateway with AWS EKS NLB
 
 This lesson covers the steps to Integrate API Gateway with AWS EKS NLB.
 ![API](API.png)
