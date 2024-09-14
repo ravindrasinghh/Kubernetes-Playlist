@@ -10,6 +10,6 @@ In this lesson, you'll learn how to create an Amazon EKS cluster using Terraform
 This lesson covers the steps to install and configure an NGINX Ingress Controller in your EKS cluster, enabling you to manage external access to your Kubernetes services.
 ![NGINX](Lesson2/NGINX.png)
 
-### Lesson 3: Integrate API Gateway with AWS EKS NLB(_In Progress_)
+### Lesson 3: Integrate API Gateway with AWS EKS NLB
 In this lesson, you'll integrate an AWS API Gateway with the Network Load Balancer (NLB) in your EKS cluster, allowing you to expose your services via a secure API endpoint.
 ![API](Lesson3/API.png)
