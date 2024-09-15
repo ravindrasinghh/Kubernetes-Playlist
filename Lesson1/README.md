@@ -3,11 +3,8 @@
 
 This repository contains Terraform scripts to create an Amazon EKS cluster. The setup includes VPC, subnets, security groups, IAM roles, and the EKS cluster itself.
 
-## Medium Article Link:
+## Medium and Youtube Article Link:
 - [Read the detailed guide on Medium](https://medium.com/@ravindrasinghh/create-an-eks-cluster-using-terraform-329b9dde068f)
-
-## Youtube Article Link:
-- [Watch the Tutorial on YouTube](https://www.youtube.com/watch?v=vKi6K5ope6c)
 
 ## Prerequisites
 
