@@ -5,7 +5,9 @@ This repository contains Terraform scripts to create an Amazon EKS cluster. The 
 
 ## Medium Article Link:
 - [Read the detailed guide on Medium](https://medium.com/@ravindrasinghh/create-an-eks-cluster-using-terraform-329b9dde068f)
-- [![Watch the Tutorial on YouTube](https://www.youtube.com/watch?v=vKi6K5ope6c)
+
+## Youtube Article Link:
+- [Watch the Tutorial on YouTube](https://www.youtube.com/watch?v=vKi6K5ope6c)
 
 ## Prerequisites
 
