@@ -1,0 +1,20 @@
+global:
+  domain: "argo.codedevops.cloud"
+controller:
+  enableStatefulSet: true
+server:
+  config:
+    url: "https://argo.codedevops.cloud"
+    statusbadge.enabled: true
+    exec.enabled: true
+  extraArgs:
+    - --insecure
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+      nlb.ingress.kubernetes.io/scheme: internet-facing
+      nlb.ingress.kubernetes.io/target-type: instance
+      nlb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+      nlb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-south-1:434605749312:certificate/50eeb484-0d88-4617-bdf6-1d339f2f3b48"
