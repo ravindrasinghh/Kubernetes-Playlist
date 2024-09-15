@@ -6,6 +6,12 @@ This lesson covers the steps to install and configure an NGINX Ingress Controlle
 # Before getting started:
 1. Follow the instructions from the previous video to <b>create a EKS cluster with v1.30</b>
 
+## Medium Article Link:
+- [Read the detailed guide on Medium](https://medium.com/@ravindrasinghh/install-nginx-ingress-controller-in-aws-eks-890dc9c4ff72)
+
+## Youtube Article Link:
+- [Watch the Tutorial on YouTube](https://www.youtube.com/PYO0OFYNI5A)
+
 Before you begin, ensure you have the following installed:
 
 - [Terraform](https://www.terraform.io/downloads.html) v1.0 or later
