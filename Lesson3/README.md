@@ -1,7 +1,7 @@
 ### Lesson 3: Integrate API Gateway with AWS EKS NLB
 
 This lesson covers the steps to Integrate API Gateway with AWS EKS NLB.
-![API](APIGW.png)
+![API](APIGWW.png)
 
 # Before getting started:
 1. Follow the instructions from the previous video to <b>create a EKS cluster with v1.30</b>
