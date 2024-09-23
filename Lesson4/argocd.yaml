@@ -7,8 +7,6 @@ server:
     url: "https://argo.codedevops.cloud"
     statusbadge.enabled: true
     exec.enabled: true
-  extraArgs:
-    - --insecure
   ingress:
     enabled: true
     ingressClassName: nginx
