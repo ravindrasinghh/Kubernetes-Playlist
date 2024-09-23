@@ -14,6 +14,6 @@ This lesson covers the steps to install and configure an NGINX Ingress Controlle
 In this lesson, you'll integrate an AWS API Gateway with the Network Load Balancer (NLB) in your EKS cluster, allowing you to expose your services via a secure API endpoint.
 ![API](Lesson3/APIGWW.png)
 
-### Lesson 4: Install Argocd using Helm and Access via Ingress(_IN_PROGRESS_)
-In this lesson, you will learn how to install ArgoCD using a Helm chart and configure access through an NGINX Ingress Load Balancer. 
+### Lesson 4: Install ArgoCD and Securing Access Using Amazon Cognito
+In this lesson, you will learn how to install ArgoCD using a Helm chart and secure ArgoCD access with Amazon Cognito.
 ![API](Lesson4/argo-png-latest.png)
