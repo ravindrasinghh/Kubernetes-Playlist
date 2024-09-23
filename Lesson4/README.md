@@ -1,4 +1,4 @@
-### Lesson 5: Install Argocd using Helm and Access via Ingress
+### Lesson 4: Installing ArgoCD and Securing Access Using Amazon Cognito
 
 In this lesson, you will learn how to install ArgoCD using a Helm chart and configure access through an NGINX Ingress Load Balancer. 
 ![ARGOCD](argo-png-latest.png)
