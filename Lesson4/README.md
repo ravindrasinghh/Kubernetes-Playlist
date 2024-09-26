@@ -79,8 +79,8 @@ server:
     oidc.config: |
         name: admin
         issuer: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_YEwPaQA4Q  # Replace with your AWS SSO Issuer URL
-        clientID: 3f8r6j111qidd2c2ft9rmh4vuc     # Replace with your AWS SSO Client ID
-        clientSecret: 1gpls5t1pm3gjg3rfltsja6bkrdmt7j3jjdmsussogm8at3i1tj # Replace with your AWS SSO Client Secret
+        clientID: 3f8r6j111qidd2c2ft9rmh4vu    # Replace with your AWS SSO Client ID
+        clientSecret: 1gpls5t1pm3gjg3rfltsja6b # Replace with your AWS SSO Client Secret
         redirectUrI: https://argo.codedevops.cloud/api/dex/callback
         requestedScopes: ["email", "openid", "phone"]
         requestedIDTokenClaims: {"groups": {"essential": true}}      
