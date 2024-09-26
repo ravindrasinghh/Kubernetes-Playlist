@@ -54,5 +54,48 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 ```
 ##  Kubernetes YAML configuration file for Ingress + Cognito
 ```
-tbd
+global:
+  domain: https://argo.codedevops.cloud
+configs:
+  params:
+    "server.insecure": true
+  cm:
+    create: true        
+  rbac:
+    create: true
+    policy.default: ''
+    policy.csv: |
+        g, argocd-readonly, role:readonly
+        g, argocd-admin, role:admin
+    scopes: '[groups]'   
+repoServer:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi            
+server:
+  config:
+    url: "https://argo.codedevops.cloud"   
+    oidc.config: |
+        name: admin
+        issuer: https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_YEwPaQA4Q  # Replace with your AWS SSO Issuer URL
+        clientID: 3f8r6j111qidd2c2ft9rmh4vuc     # Replace with your AWS SSO Client ID
+        clientSecret: 1gpls5t1pm3gjg3rfltsja6bkrdmt7j3jjdmsussogm8at3i1tj # Replace with your AWS SSO Client Secret
+        redirectUrI: https://argo.codedevops.cloud/api/dex/callback
+        requestedScopes: ["email", "openid", "phone"]
+        requestedIDTokenClaims: {"groups": {"essential": true}}      
+  extraArgs:
+    - --insecure  
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      nginx.ingress.kubernetes.io/cors-expose-headers: "*, X-CustomResponseHeader"
+      nlb.ingress.kubernetes.io/scheme: internet-facing
+      nlb.ingress.kubernetes.io/target-type: instance
+      nlb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+      nlb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-south-1:434605749312:certificate/50eeb484-0d88-4617-bdf6-1d339f2f3b48"
+    hosts:
+      - argo.codedevops.cloud
 ```
