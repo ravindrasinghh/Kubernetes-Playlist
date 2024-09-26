@@ -19,7 +19,7 @@ Before you begin, ensure you have the following installed:
 ##  Kubernetes YAML configuration file for Ingress
 ```
 global:
-  domian: https://argo.codedevops.cloud
+  domain: https://argo.codedevops.cloud
 repoServer:
   resources:
     requests:
