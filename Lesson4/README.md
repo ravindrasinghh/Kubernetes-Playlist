@@ -31,9 +31,7 @@ server:
       cpu: 100m
       memory: 128Mi
   config:
-    url: "https://argo.codedevops.cloud"        
-  extraArgs:
-    - --insecure  
+    url: "https://argo.codedevops.cloud" 
   ingress:
     enabled: true
     ingressClassName: nginx
