@@ -45,6 +45,11 @@ server:
     hosts:
       - argo.codedevops.cloud
 ```
+## To log in:
+Get the initial password for the admin user:
+```
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
+```
 ##  Kubernetes YAML configuration file for Ingress + Cognito
 ```
 tbd
