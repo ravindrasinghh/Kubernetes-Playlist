@@ -1,5 +1,5 @@
 global:
-  domian: https://argo.codedevops.cloud
+  domain: https://argo.codedevops.cloud
 repoServer:
   resources:
     requests:
