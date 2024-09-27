@@ -7,7 +7,7 @@ In this lesson, you will learn how to install ArgoCD using a Helm chart and conf
 1. Follow the instructions from the previous video to <b>create a EKS cluster with v1.30</b>
 
 ## Medium and Youtube Article Link:
-- [Read the detailed guide on Medium](https://medium.com/@ravindrasinghh/integrate-api-gateway-with-aws-eks-nlb-e8f72be32d68)
+- [Read the detailed guide on Medium](https://medium.com/@ravindrasinghh/installing-argocd-and-securing-access-using-amazon-cognito-6f6cb7a8f2f5)
 
 
 Before you begin, ensure you have the following installed:
