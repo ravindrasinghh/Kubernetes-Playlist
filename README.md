@@ -17,3 +17,6 @@ In this lesson, you'll integrate an AWS API Gateway with the Network Load Balanc
 ### Lesson 4: Install ArgoCD and Securing Access Using Amazon Cognito
 In this lesson, you will learn how to install ArgoCD using a Helm chart and secure ArgoCD access with Amazon Cognito.
 ![API](Lesson4/argo-png-latest.png)
+
+### Lesson 4: EKS & NGINX Monitoring with Prometheus, Grafana, and Alerts
+#TBD 
