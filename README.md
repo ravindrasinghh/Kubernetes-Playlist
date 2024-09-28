@@ -19,4 +19,5 @@ In this lesson, you will learn how to install ArgoCD using a Helm chart and secu
 ![API](Lesson4/argo-png-latest.png)
 
 ### Lesson 5: EKS & NGINX Monitoring with Prometheus, Grafana, and Alerts
-#TBD 
+In this lesson, you will learn how to Monitor EKS and NGINX with Prometheus, Grafana Visualizations, and Alerts
+![MONITORING](Lesson5/monitoring.png)
