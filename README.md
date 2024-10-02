@@ -23,3 +23,5 @@ In this lesson, you will learn how to Monitor EKS and NGINX with Prometheus, Gra
 ![MONITORING](Lesson5/monitoring.png)
 ## Cluster and Disk Monitoring
 ![DASHBOARD1](Lesson5/cluster_disk.png)
+## Promethes Alert dashboard
+![DASHBOARD1](Lesson5/promethues_alert.png)
