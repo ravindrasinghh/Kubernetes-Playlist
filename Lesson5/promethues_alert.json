@@ -55,7 +55,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 11098,
   "graphTooltip": 1,
-  "id": 35,
+  "id": 28,
   "links": [
     {
       "icon": "external link",
@@ -563,8 +563,8 @@
     ]
   },
   "timezone": "",
-  "title": "Prometheus Alertsssss",
-  "uid": "seea-9_sik",
-  "version": 2,
+  "title": "Prometheus Alerts",
+  "uid": "eea-9_sik",
+  "version": 3,
   "weekStart": ""
 }
