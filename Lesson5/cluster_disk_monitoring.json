@@ -19,7 +19,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 28,
+  "id": 36,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -559,7 +559,7 @@
               }
             ]
           },
-          "unit": "megabytes",
+          "unit": "percent",
           "unitScale": true
         },
         "overrides": []
@@ -637,6 +637,6 @@
   "timezone": "",
   "title": "cluster and disk monitroing",
   "uid": "fbad5e66-1f60-4f08-bd37-e347b4152d05",
-  "version": 6,
+  "version": 2,
   "weekStart": ""
 }
