@@ -25,3 +25,6 @@ In this lesson, you will learn how to Monitor EKS and NGINX with Prometheus, Gra
 ![DASHBOARD1](Lesson5/cluster_disk.png)
 ## Prometheus Alert dashboard
 ![DASHBOARD2](Lesson5/prometheus_alert.png)
+
+### Lesson 6: Finops- Scale EKS with Karpenter(_IN_PROGRESS_)
+## tbd
